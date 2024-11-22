@@ -9,7 +9,7 @@ const EmployeeEdit = ({ employee, refreshList, setEditEmployee, closeModal }) =>
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/employees/${employee._id}`, formData);
+      await axios.put(`https://employee-server-nine.vercel.app/employees/${employee._id}`, formData);
       setEditEmployee(null);
       refreshList();
       toast.success("Employee updated successfully!");

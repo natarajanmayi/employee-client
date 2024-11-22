@@ -16,12 +16,12 @@ const EmployeeList = () => {
   }, []);
 
   const fetchEmployees = async () => {
-    const response = await axios.get("http://localhost:5000/employees");
+    const response = await axios.get("https://employee-server-nine.vercel.app/employees");
     setEmployees(response.data);
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/employees/${id}`);
+    await axios.delete(`https://employee-server-nine.vercel.app/employees/${id}`);
     fetchEmployees();
     toast.success("Employee deleted successfully!");
   };

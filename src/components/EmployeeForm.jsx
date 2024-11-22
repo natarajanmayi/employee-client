@@ -17,7 +17,7 @@ const EmployeeForm = ({ refreshList, closeModal }) => {
       return;
     }
     try {
-      await axios.post("http://localhost:5000/employees", formData);
+      await axios.post("https://employee-server-nine.vercel.app/employees", formData);
       setFormData({ name: "", position: "", department: "" });
       refreshList();
       toast.success("Employee added successfully!");
